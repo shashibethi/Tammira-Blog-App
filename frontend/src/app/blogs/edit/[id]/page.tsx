@@ -160,7 +160,7 @@ export default function EditBlogPage() {
                   name="title"
                   value={formData.title}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200 text-gray-900"
                   required
                 />
               </div>
@@ -175,7 +175,7 @@ export default function EditBlogPage() {
                   name="sub_title"
                   value={formData.sub_title}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200 text-gray-900"
                 />
               </div>
 
@@ -189,7 +189,7 @@ export default function EditBlogPage() {
                   value={formData.content}
                   onChange={handleChange}
                   rows={10}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200 text-gray-900"
                   required
                 ></textarea>
               </div>
@@ -205,7 +205,7 @@ export default function EditBlogPage() {
                     value={tagInput}
                     onChange={(e) => setTagInput(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && (e.preventDefault(), handleAddTag())}
-                    className="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+                    className="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200 text-gray-900"
                     placeholder="Add a tag and press Enter"
                   />
                   <button
@@ -220,7 +220,7 @@ export default function EditBlogPage() {
                   {formData.tags.map((tag) => (
                     <div
                       key={tag}
-                      className="flex items-center px-3 py-1 bg-gray-100 rounded-full text-sm"
+                      className="flex items-center px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-900"
                     >
                       #{tag}
                       <button
@@ -244,7 +244,7 @@ export default function EditBlogPage() {
                   name="status"
                   value={formData.status}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200 text-gray-900"
                 >
                   <option value="published">Published</option>
                   <option value="draft">Draft</option>
