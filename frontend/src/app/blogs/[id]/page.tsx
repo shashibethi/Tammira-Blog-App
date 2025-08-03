@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
-import Layout from '../../../components/Layout';
 import { fetchBlogById, addTag } from '../../../store/slices/blogSlice';
 import { Blog } from '../../../types/blog';
 import { RootState, AppDispatch } from '../../../store/store';
@@ -56,7 +55,7 @@ export default function BlogDetailPage() {
 
   if (loading) {
     return (
-      <Layout>
+      <>
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="animate-pulse">
@@ -91,13 +90,13 @@ export default function BlogDetailPage() {
             </div>
           </div>
         </div>
-      </Layout>
+      </>
     );
   }
 
   if (error || !blog) {
     return (
-      <Layout>
+      <>
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center">
           <div className="max-w-md mx-auto text-center px-4">
             <div className="w-20 h-20 bg-gradient-to-r from-red-100 to-pink-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -120,7 +119,7 @@ export default function BlogDetailPage() {
             </Link>
           </div>
         </div>
-      </Layout>
+      </>
     );
   }
 
@@ -135,7 +134,7 @@ export default function BlogDetailPage() {
   };
 
   return (
-    <Layout>
+    <>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Navigation */}
@@ -297,6 +296,6 @@ export default function BlogDetailPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
